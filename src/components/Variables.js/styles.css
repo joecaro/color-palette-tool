@@ -1,8 +1,22 @@
 .popup {
+    position: relative;
     padding: 2rem;
     background-color: rgb(16, 16, 40);
     color: rgb(229, 174, 185);
     border-radius: 1rem;
+}
 
+.copy-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 
+    width: 30px;
+    height: 30px;
+    border-radius: .5rem;
+    }
+
+.copy-button:hover {
+    cursor: pointer;
+    background-color: rgb(159, 159, 159);
 }
