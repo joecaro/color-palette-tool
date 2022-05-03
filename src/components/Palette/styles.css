@@ -18,7 +18,8 @@
 .selector-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 1rem;
 }
 
 .selector-container p {

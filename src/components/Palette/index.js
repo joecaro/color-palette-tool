@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import generatePaletteArray from "../../lib/generatePaletteArray";
 import ColorPicker from "../ColorPicker";
+import Variables from "../Variables.js";
 import "./styles.css";
 
 const Palette = ({ swatches = 7, color = "#bbbbbb" }) => {
@@ -48,6 +49,7 @@ const Palette = ({ swatches = 7, color = "#bbbbbb" }) => {
           <ColorPicker key={color + idx} color={color} />
         ))}
       </div>
+      <Variables colors={PaletteColors} />
     </div>
   );
 };
