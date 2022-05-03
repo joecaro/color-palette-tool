@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Palette from "./components/Palette";
 
 function App() {
+  const [palettes, setPalettes] = useState([0]);
+  const [swatches, setSwatches] = useState(7);
+
+  const addSwatch = () => {
+    palettes.push(palettes.length);
+    setPalettes([...palettes]);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="swatch-selector">
+        <p className="subheadline">Number of Swatches</p>
+        <input
+        className="number-input"
+          type="number"
+          value={swatches}
+          onChange={(e) => setSwatches(e.target.value)}
+        />
+      </div>
+      {palettes.map((swatch, idx) => (
+        <Palette swatches={swatches} key={`swatch - ${idx}`} />
+      ))}
+      <button onClick={addSwatch}>Add Swatch</button>
     </div>
   );
 }
