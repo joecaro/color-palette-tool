@@ -10,7 +10,7 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
   const [minimumLightness, setMinimumLightness] = useState(0.05);
   const [mainColor, setMainColor] = useState(color);
   const [mainColorText, setMainColorText] = useState(color);
-  const [PaletteColors, setPaletteColors] = useState(
+  const [paletteColors, setPaletteColors] = useState(
     generatePaletteArray(mainColor, swatches)
   );
 
@@ -95,14 +95,14 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
         </div>
       </div>
       <div className="palette">
-        {PaletteColors.map((color, idx) => (
+        {paletteColors.map((color, idx) => (
           <Swatch
             key={`palette-${paletteId}-swatch-${idx}-${color}`}
             color={color}
           />
         ))}
       </div>
-      <Variables colors={PaletteColors} />
+      <Variables colors={paletteColors} />
     </div>
   );
 };
