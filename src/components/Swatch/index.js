@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './styles.css'
 
-const ColorPicker = ({color = "#bbbbbb"}) => {
+const Swatch = ({color = "#bbbbbb"}) => {
     const [currentColor, setCurrentColor] = useState(color)
   return (
     <div className='swatch-container'>
@@ -11,4 +11,4 @@ const ColorPicker = ({color = "#bbbbbb"}) => {
   )
 }
 
-export default ColorPicker
+export default Swatch;

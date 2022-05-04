@@ -21,8 +21,8 @@ function App() {
           onChange={(e) => setSwatches(e.target.value)}
         />
       </div>
-      {palettes.map((swatch, idx) => (
-        <Palette swatches={swatches} key={`swatch - ${idx}`} />
+      {palettes.map((palette, idx) => (
+        <Palette swatches={swatches} paletteId={idx} key={`swatch - ${idx}`} />
       ))}
       <button onClick={addSwatch}>Add Swatch</button>
     </div>

@@ -20,16 +20,3 @@
     cursor: pointer;
     background-color: rgb(159, 159, 159);
 }
-@keyframes enter {
-    from {
-        transform: translateY(40px)
-    }
-
-    to {
-        transform: translateY(0px)
-    }
-}
-
-.css-color {
-    animation: enter .2s;
-}

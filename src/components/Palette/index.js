@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import generatePaletteArray from "../../lib/generatePaletteArray";
 import isValidHexaCode from "../../lib/isValidHex";
-import ColorPicker from "../Swatch";
+import Swatch from "../Swatch";
 import Variables from "../Variables.js";
 import "./styles.css";
 
-const Palette = ({ swatches = 7, color = "#bbbbbb" }) => {
+const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
   const [mainColor, setMainColor] = useState(color);
   const [mainColorText, setMainColorText] = useState(color);
   const [PaletteColors, setPaletteColors] = useState(
@@ -47,7 +47,7 @@ const Palette = ({ swatches = 7, color = "#bbbbbb" }) => {
       </div>
       <div className="palette">
         {PaletteColors.map((color, idx) => (
-          <ColorPicker key={color + idx} color={color} />
+          <Swatch key={`palette-${paletteId}-swatch-${idx}-${color}`} color={color} />
         ))}
       </div>
       <Variables colors={PaletteColors} />
