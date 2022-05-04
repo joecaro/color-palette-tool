@@ -5,10 +5,6 @@
   justify-items: center;
 }
 
-input {
-  width: 100px;
-}
-
 button {
   width: 100px;
 }
@@ -30,4 +26,15 @@ button {
 .swatch-selector {
   display: flex;
   gap: 1rem;
+}
+.color-input {
+  width: 25px;
+  height: 25px;
+  padding: .25rem;
+  border-radius: 50%;
+}
+
+.color-input::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
 }

@@ -10,6 +10,7 @@ function App() {
     palettes.push(palettes.length);
     setPalettes([...palettes]);
   };
+  
   return (
     <div className="App">
       <div className="swatch-selector">

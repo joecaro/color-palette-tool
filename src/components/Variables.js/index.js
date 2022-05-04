@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import copyToClipboard from "../../lib/copyToClipboard";
 import "./styles.css";
 
-const VariablePopUp = ({ colors, toggled }) => {
+const VariablePopUp = ({ colors }) => {
   const [copied, setCopied] = useState(false)
   const handleCopy = () => {
     let str = "";
     colors.forEach(
       (color, idx) =>
         (str = str.concat(`
-    --color${idx + 1}00: ${color}`))
+    --color${idx + 1}00: ${color};`))
     );
 
     if (copyToClipboard(str)) {
@@ -26,7 +26,7 @@ const VariablePopUp = ({ colors, toggled }) => {
     <div style={{}} className="popup">
       {colors.map((color, idx) => (
         <p key={`popup - ${color}`} className="css-color">
-          --color{idx + 1}00: {color}
+          --color{idx + 1}00: {color};
         </p>
       ))}
       <button className="copy-button" onClick={handleCopy}>

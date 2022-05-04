@@ -6,11 +6,12 @@
 
 .palette {
     display: flex;
-    /* gap: 1rem; */
+    width: 40vw;
 }
 
 .color {
     padding: .5rem;
+    font-size: 1rem;
     background-color: white;
     border-radius: .5rem;
 }
@@ -18,7 +19,7 @@
 .selector-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -26,7 +27,7 @@
     margin: 0;
 }
 
-.palette-headline {
+.palette-label {
     font-weight: 500;
     color: #ffffff;
 }
