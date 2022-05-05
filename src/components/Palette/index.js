@@ -5,7 +5,6 @@ import Swatch from "../Swatch";
 import Variables from "../Variables.js";
 import "./styles.css";
 
-
 const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
   const [maximumLightness, setMaximumLightness] = useState(0.95);
   const [minimumLightness, setMinimumLightness] = useState(0.05);
@@ -41,10 +40,13 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
   return (
     <div className="palette-container ">
       <div className="selector-container">
+        <p >Pallete Options</p>
+        <i>*Will reset manual palette changes</i>
         <label htmlFor="min-l" className="palette-label">
           Minimum Lightness
         </label>
         <input
+          id="min-l"
           name="min-l"
           type="number"
           value={minimumLightness}
@@ -58,6 +60,7 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
           Maximum Lightness
         </label>
         <input
+          id="max-l"
           name="max-l"
           type="number"
           min={0}
@@ -72,6 +75,7 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
         </label>
         <div style={{ display: "flex", gap: ".5rem", alignItems: "center" }}>
           <input
+            id="mid-color"
             name="mid-color"
             type="text"
             value={mainColorText}
@@ -104,4 +108,3 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
 };
 
 export default Palette;
-

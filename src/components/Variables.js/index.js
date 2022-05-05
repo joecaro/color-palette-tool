@@ -23,7 +23,7 @@ const VariablePopUp = ({ colors }) => {
 
   };
   return (
-    <div style={{}} className="popup">
+    <div style={{}} className="container">
       {colors.map((color, idx) => (
         <p key={`popup - ${color}`} className="css-color">
           --color{idx + 1}00: {color};

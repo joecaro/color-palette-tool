@@ -1,8 +1,21 @@
-.popup {
+@media (prefers-color-scheme: light) {
+    .container {
+        box-shadow: 0 0 5px rgba(0, 0, 0, .15), 0 0 20px rgba(0, 0, 0, .05);
+        background-color: var(--lightBackground300);
+        color: var(--colorText100)
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .container {
+        background-color: var(--lightBackground200);
+    }
+}
+
+.container {
     position: relative;
+    font-weight: 500;
     padding: 2rem;
-    background-color: rgb(16, 16, 40);
-    color: rgb(235, 216, 237);
     border-radius: 1rem;
 }
 

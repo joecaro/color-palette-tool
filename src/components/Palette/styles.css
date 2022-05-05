@@ -1,3 +1,15 @@
+@media (prefers-color-scheme: light) {
+    .selector-container {
+        box-shadow: 0 0 5px rgba(0, 0, 0, .15), 0 0 20px rgba(0, 0, 0, .05);
+        background-color: var(--lightBackground300);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .selector-container {
+        background-color: var(--lightBackground200);
+    }
+}
 .palette-container {
     display: flex;
     gap: 2rem;
@@ -12,7 +24,6 @@
 .color {
     padding: .5rem;
     font-size: 1rem;
-    background-color: white;
     border-radius: .5rem;
 }
 
@@ -21,6 +32,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
 }
 
 .selector-container p {
@@ -29,5 +42,4 @@
 
 .palette-label {
     font-weight: 500;
-    color: #ffffff;
 }
