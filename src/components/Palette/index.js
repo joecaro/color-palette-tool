@@ -5,6 +5,7 @@ import Swatch from "../Swatch";
 import Variables from "../Variables.js";
 import "./styles.css";
 
+
 const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
   const [maximumLightness, setMaximumLightness] = useState(0.95);
   const [minimumLightness, setMinimumLightness] = useState(0.05);
@@ -13,7 +14,6 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
   const [paletteColors, setPaletteColors] = useState(
     generatePaletteArray(mainColor, swatches)
   );
-
   useEffect(() => {
     setPaletteColors(
       generatePaletteArray(
@@ -36,15 +36,8 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
   const handleChangeMainColor = (e) => {
     setMainColor(e.target.value);
     setMainColorText(e.target.value);
-    setPaletteColors(
-      generatePaletteArray(
-        e.target.value,
-        swatches,
-        minimumLightness,
-        maximumLightness
-      )
-    );
   };
+
   return (
     <div className="palette-container ">
       <div className="selector-container">
@@ -77,7 +70,7 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
         <label htmlFor="mid-color" className="palette-label">
           Palette Mid Color
         </label>
-        <div style={{display: 'flex', gap: ".5rem", alignItems: 'center'}}>
+        <div style={{ display: "flex", gap: ".5rem", alignItems: "center" }}>
           <input
             name="mid-color"
             type="text"
@@ -95,10 +88,13 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
         </div>
       </div>
       <div className="palette">
-        {paletteColors.map((color, idx) => (
+        {paletteColors.map((color, idx, colors) => (
           <Swatch
             key={`palette-${paletteId}-swatch-${idx}-${color}`}
             color={color}
+            index={idx}
+            paletteColors={colors}
+            setPaletteColors={setPaletteColors}
           />
         ))}
       </div>
@@ -108,3 +104,4 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
 };
 
 export default Palette;
+
