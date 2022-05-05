@@ -51,7 +51,7 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
           type="number"
           value={minimumLightness}
           min={0}
-          max={1}
+          max={.45}
           step={0.05}
           onChange={(e) => setMinimumLightness(e.target.value)}
           className="color"
@@ -63,7 +63,7 @@ const Palette = ({ swatches = 7, color = "#bbbbbb", paletteId }) => {
           id="max-l"
           name="max-l"
           type="number"
-          min={0}
+          min={.55}
           max={1}
           step={0.05}
           value={maximumLightness}

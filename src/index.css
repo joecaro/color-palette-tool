@@ -12,13 +12,7 @@
   --lightBackground400: #d2d7da;
   --lightBackground500: #d2d7da;
   --lightBackground600: #ccd1d5;
-  --colorText100: #914100;
-  --colorText200: #c76211;
-  --colorText300: #eb9e5f;
-  --colorText400: #eec09b;
-  --colorText500: #f5d0b2;
-  --colorText600: #fbe0cb;
-  --colorText700: #fef1e7;
+  --colorText100: #c2149c;
 }
 
 @media (prefers-color-scheme: light) {
